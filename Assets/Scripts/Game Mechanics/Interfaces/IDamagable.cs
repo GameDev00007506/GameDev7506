@@ -2,7 +2,7 @@
 
 public interface IDamagable
 {
-  int _healthAmount { get; set; }
+  int HealthAmount { get; set; }
   
   public void Damage(int damageAmount);
 }

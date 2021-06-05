@@ -3,18 +3,18 @@ using UnityEngine;
 
 public class Crate : MonoBehaviour, IDamagable
 {
-    public int _healthAmount { get; set; }
+    public int HealthAmount { get; set; }
 
     private void Awake()
     {
-        _healthAmount = 2;
+        HealthAmount = 2;
     }
 
     public void Damage(int damageAmount)
     {
-        if (_healthAmount > 0)
+        if (HealthAmount > 0)
         {
-            _healthAmount -= damageAmount;
+            HealthAmount -= damageAmount;
         }
         else
         {
