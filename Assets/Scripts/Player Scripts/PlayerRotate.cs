@@ -15,12 +15,24 @@ public class PlayerRotate : MonoBehaviour
         transform.localScale = new Vector2(xScale, yScale);
     }
 
+    public void Rotate()
+    {
+        if (_playerMove.HorizontalMove > 0)
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+        }
+        if (_playerMove.HorizontalMove < 0)
+        {
+            transform.eulerAngles = new Vector2(0, -180); 
+        }
+    }
+
     /// <summary>
     /// Checks Player Input and Rotates
     /// </summary>
     public void CheckPlayerInput()
     {
-        if (_playerMove.HorizontalMove > 0)
+        /*if (_playerMove.HorizontalMove > 0)
         {
             RotatePlayer(yScale);
         }
@@ -28,7 +40,8 @@ public class PlayerRotate : MonoBehaviour
         else if (_playerMove.HorizontalMove < 0)
         {
             RotatePlayer(-yScale);
-        }
+        }*/
+        Rotate();
     }
 
 

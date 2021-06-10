@@ -20,6 +20,7 @@ public class TurnOffSpikes : MonoBehaviour
         if (other.TryGetComponent(out PlayerMove player))
         {
             TurnOffHazards();
+            Destroy(gameObject, 0.1f);
         }
     }
 }
