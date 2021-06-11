@@ -7,7 +7,7 @@ public class Crate : MonoBehaviour, IDamagable
 
     private void Awake()
     {
-        HealthAmount = 2;
+        HealthAmount = 4;
     }
 
     public void Damage(int damageAmount)
@@ -28,6 +28,7 @@ public class Crate : MonoBehaviour, IDamagable
         if (other.CompareTag("Arrow"))
         {
             Damage(1);
+            Destroy(other.gameObject);
         }
     }
 }

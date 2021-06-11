@@ -20,6 +20,7 @@ public class PlayerMove : MonoBehaviour
       _horizontalMove = Input.GetAxis("Horizontal") * Time.deltaTime * _moveSpeed;
       _moveDirection = new Vector2(_horizontalMove, 0);
       transform.position += _moveDirection;
+      transform.position = new Vector2(Mathf.Clamp(transform.position.x, -10, 200), transform.position.y);
       //transform.Translate(transform.forward * _moveDirection);
    }
    

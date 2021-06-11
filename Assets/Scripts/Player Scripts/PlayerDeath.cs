@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,6 +10,11 @@ public class PlayerDeath : MonoBehaviour
     public void PlayerIsDead()
     {
         _onPlayerDead.Invoke();
+    }
+
+    private void Update()
+    {
+        CheckDeath();
     }
 
     public void CheckDeath()
